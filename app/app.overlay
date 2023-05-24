@@ -1,0 +1,23 @@
+/{
+    
+    leds{
+        compatible="gpio-leds";
+         blue: blue{
+            gpios=<&gpio0 2 GPIO_ACTIVE_HIGH>;
+            label="blue led p2";
+         };
+      };
+    buttons
+     {
+        blue_hat:blue_hat
+        {
+          gpios=<&gpio0 15  (GPIO_PULL_UP|GPIO_ACTIVE_HIGH)>; 
+          label="bt button";   
+        };
+      };
+   aliases{
+      ble=&blue;
+      buttony=&blue_hat;
+ };
+   
+};
